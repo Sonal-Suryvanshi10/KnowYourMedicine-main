@@ -47,7 +47,7 @@ export default function MedicineAssistant() {
     try {
       const history = conversation.slice(1).slice(-8)
       if (history[0]?.role === 'assistant') history.shift()
-      const { data } = await api.post('/assistant', { messages: history })
+      const { data } = await api.post('/assistant', { messages: history }, { timeout: 0 })
       setMessages(previous => [...previous, { role: 'assistant', content: data.reply }])
     } catch (requestError) {
       setError(requestError.userMessage || 'The assistant is unavailable right now. Please try again later.')

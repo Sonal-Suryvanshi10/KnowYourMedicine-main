@@ -50,7 +50,6 @@ router.post('/', requestLimiter, asyncHandler(async (req, res) => {
         })),
         generationConfig: { temperature: 0.3, maxOutputTokens: 500 },
       }),
-      signal: AbortSignal.timeout(30000),
     })
   } catch (error) {
     console.error('Medicine assistant provider request failed:', error.name || 'NetworkError')
