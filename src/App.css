@@ -925,16 +925,29 @@ table tbody tr:hover{background:#f0f8f6}
 .hero-section{
   width:100vw;
   max-width:none;
-  height:150px;
+  height:auto;
   min-height:150px;
   margin:0 calc(50% - 50vw) 28px;
-  padding:26px 18px;
+  padding:34px clamp(20px,8vw,120px);
   border:0;
   border-radius:0 0 24px 24px;
+  background:
+    radial-gradient(ellipse at 12% 0%,#2f8175 0,transparent 42%),
+    linear-gradient(118deg,#103d39 0%,#145b53 52%,#174b46 100%);
   box-shadow:0 12px 30px #103d3926;
 }
-.hero-section::before{left:-86px;top:-150px;width:230px}
-.hero-section::after{right:-120px;bottom:-174px;width:290px}
+.hero-section::before,.hero-section::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:230px;
+  aspect-ratio:1;
+  border:1px solid #d5f0e51f;
+  border-radius:50%;
+  pointer-events:none;
+}
+.hero-section::before{left:-86px;top:-150px;box-shadow:0 0 0 24px #d5f0e50a,0 0 0 50px #d5f0e508}
+.hero-section::after{right:-120px;bottom:-174px;width:290px;box-shadow:0 0 0 24px #d5f0e50a,0 0 0 50px #d5f0e508}
 .hero-copy{width:min(900px,100%);max-width:900px;text-align:center}
 .hero-copy .hero-eyebrow{
   justify-content:center;
@@ -945,10 +958,13 @@ table tbody tr:hover{background:#f0f8f6}
 }
 .hero-copy .hero-eyebrow>span{display:none}
 .hero-copy h1{
+  max-width:900px;
   margin:0;
   gap:12px;
-  font-size:clamp(25px,3vw,36px);
+  font-size:clamp(26px,3.2vw,40px);
+  line-height:1.18;
   letter-spacing:-.035em;
+  text-wrap:balance;
 }
 .hero-copy h1 svg{
   width:37px;
@@ -959,7 +975,7 @@ table tbody tr:hover{background:#f0f8f6}
   background:#e9fff014;
   color:#c5eadb;
 }
-.hero-copy>p{margin-top:8px;font-size:13px;line-height:1.55}
+.hero-copy>p{max-width:680px;margin:10px auto 0;color:#d5e9e4;font-size:14px;line-height:1.65;text-wrap:pretty}
 .topbar .main-nav>a{
   min-height:42px;
   border:1px solid transparent;
@@ -1135,10 +1151,10 @@ table tbody tr:hover{background:#f0f8f6}
   .hero-section{
     width:100vw;
     max-width:none;
-    height:142px;
-    min-height:142px;
+    height:auto;
+    min-height:132px;
     margin:0 calc(50% - 50vw) 20px;
-    padding:22px 14px;
+    padding:27px 18px;
     border-radius:0 0 18px 18px;
   }
   .assistant-panel{
@@ -1149,7 +1165,6 @@ table tbody tr:hover{background:#f0f8f6}
   .medicine-assistant{right:12px;bottom:12px;gap:10px}
 }
 @media(max-width:360px){
-  .hero-section{height:134px;min-height:134px}
   .assistant-panel{width:calc(100vw - 16px)}
   .medicine-assistant{right:8px;bottom:8px}
 }
