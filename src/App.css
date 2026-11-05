@@ -1230,3 +1230,29 @@ img,video,iframe{max-width:100%}
   box-shadow:0 -8px 26px #103d3917;
 }
 .footer-bottom{color:#f1faf6}
+.hero-section{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:auto;
+  min-height:190px;
+  padding:28px 20px;
+}
+.hero-section>.hero-copy{
+  width:min(900px,100%);
+  max-width:900px;
+  margin:auto;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero-copy .hero-eyebrow{width:max-content;max-width:100%;margin:0 auto 8px;text-align:center}
+.hero-copy h1{width:100%;margin:0 auto;justify-content:center;text-align:center}
+.hero-copy>p{width:100%;max-width:680px;margin:10px auto 0;text-align:center}
+@media(max-width:680px){
+  .hero-section{min-height:170px;height:auto;padding:24px 16px}
+  .hero-section>.hero-copy{width:100%}
+  .hero-copy .hero-eyebrow{margin-bottom:7px}
+  .hero-copy h1{margin:0 auto}
+  .hero-copy>p{margin:8px auto 0}
+}
