@@ -1153,3 +1153,12 @@ table tbody tr:hover{background:#f0f8f6}
   .assistant-panel{width:calc(100vw - 16px)}
   .medicine-assistant{right:8px;bottom:8px}
 }
+.site-footer{
+  background:
+    radial-gradient(ellipse at 12% 0%,#2f8175 0,transparent 42%),
+    linear-gradient(118deg,#103d39 0%,#145b53 52%,#174b46 100%);
+  color:#fff;
+  border-top:1px solid #347a6d;
+  box-shadow:0 -8px 26px #103d3917;
+}
+.footer-bottom{color:#f1faf6}
