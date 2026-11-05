@@ -1153,6 +1153,57 @@ table tbody tr:hover{background:#f0f8f6}
   .assistant-panel{width:calc(100vw - 16px)}
   .medicine-assistant{right:8px;bottom:8px}
 }
+.page-content,.content-page,.featured-section,.home-search-area{min-width:0}
+.page-content{overflow-x:clip}
+.home-search-area{
+  width:100%;
+  padding-inline:clamp(16px,5vw,64px);
+}
+.home-search-area .nearby-button{
+  width:min(560px,100%);
+  min-width:0;
+  font-size:clamp(14px,1.5vw,18px);
+}
+.home-search-area .hero-search{
+  width:min(700px,100%);
+}
+.nearby-map-card{width:min(960px,100%)}
+.home-register-link{align-self:center}
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.hero-copy h1{
+  justify-content:center;
+  flex-wrap:wrap;
+  text-align:center;
+}
+.hero-copy>p{margin-right:auto;margin-left:auto;text-align:center}
+img,video,iframe{max-width:100%}
+@media(max-width:680px){
+  .home-search-area{padding-inline:14px}
+  .home-search-area .hero-search{gap:7px;padding-left:11px}
+  .home-search-area .hero-search input{font-size:13px}
+  .home-search-area .hero-search button{min-width:76px;padding-inline:10px;font-size:12px}
+  .map-card-heading{align-items:flex-start;gap:12px}
+  .map-card-heading>div{min-width:0}
+  .map-locate-button{flex:none}
+  .live-map-layout{grid-template-columns:1fr}
+  .live-map-frame iframe{width:100%}
+  .cart-line{min-width:0}
+  .medicine-assistant{max-width:calc(100vw - 20px)}
+}
+@media(max-width:430px){
+  .home-search-area{padding-inline:12px}
+  .home-search-area .nearby-button{gap:8px;padding-inline:10px;font-size:13px}
+  .map-card-heading{flex-direction:column}
+  .map-locate-button{min-height:38px}
+  .section-head .text-link{align-self:flex-start}
+  .table-wrap{margin-inline:0}
+  .assistant-launcher{max-width:calc(100vw - 24px)}
+}
 .site-footer{
   background:
     radial-gradient(ellipse at 12% 0%,#2f8175 0,transparent 42%),
