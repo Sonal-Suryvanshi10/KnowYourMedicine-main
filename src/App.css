@@ -704,3 +704,87 @@ table tbody tr:hover{background:#f0f8f6}
   .topbar .brand-mark{width:36px;height:36px}
   .mobile-menu{width:36px;height:36px}
 }
+.page-title{
+  min-height:150px;
+  padding:34px clamp(20px,8vw,120px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:0;
+  border-radius:0 0 24px 24px;
+  background:
+    radial-gradient(ellipse at 12% 0%,#2f8175 0,transparent 42%),
+    linear-gradient(118deg,#103d39 0%,#145b53 52%,#174b46 100%);
+  box-shadow:0 12px 30px #103d3926;
+  text-align:center;
+}
+.page-title::before,.page-title::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:230px;
+  aspect-ratio:1;
+  border:1px solid #d5f0e51f;
+  border-radius:50%;
+  pointer-events:none;
+}
+.page-title::before{left:-86px;top:-150px;box-shadow:0 0 0 24px #d5f0e50a,0 0 0 50px #d5f0e508}
+.page-title::after{right:-120px;bottom:-174px;width:290px;box-shadow:0 0 0 24px #d5f0e50a,0 0 0 50px #d5f0e508}
+.page-title .eyebrow{
+  display:flex;
+  margin-bottom:9px;
+  color:#b6ded3;
+  font-size:10px;
+}
+.page-title .eyebrow>span{display:none}
+.page-title h1{
+  max-width:900px;
+  margin:0;
+  color:#fff;
+  font-size:clamp(26px,3.2vw,40px);
+  line-height:1.18;
+  text-wrap:balance;
+}
+.page-title p{
+  max-width:680px;
+  margin:10px 0 0;
+  color:#d5e9e4;
+  font-size:14px;
+  line-height:1.65;
+  text-wrap:pretty;
+}
+.auth-intro{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid #77aaa04d;
+  border-radius:0 0 22px 22px;
+  background:
+    radial-gradient(ellipse at 12% 0%,#2f8175 0,transparent 42%),
+    linear-gradient(118deg,#103d39 0%,#145b53 52%,#174b46 100%);
+  box-shadow:0 12px 30px #103d3926;
+}
+.auth-intro::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  right:-90px;
+  bottom:-205px;
+  width:300px;
+  aspect-ratio:1;
+  border:1px solid #d5f0e51f;
+  border-radius:50%;
+  box-shadow:0 0 0 24px #d5f0e50a,0 0 0 50px #d5f0e508;
+  pointer-events:none;
+}
+@media(max-width:680px){
+  .page-title{min-height:132px;padding:27px 18px;border-radius:0 0 18px 18px}
+  .search-page .page-title{padding-right:18px}
+  .page-title .eyebrow{margin-bottom:7px;font-size:9px}
+  .page-title h1{font-size:clamp(23px,6.5vw,32px);line-height:1.2}
+  .page-title p{margin-top:8px;font-size:12px}
+}
