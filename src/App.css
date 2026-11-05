@@ -922,21 +922,6 @@ table tbody tr:hover{background:#f0f8f6}
   stroke-width:2.2;
 }
 .footer-brand .brand-mark>svg{color:#14574d;stroke-width:2.2}
-.brand-mark-plus{
-  position:absolute;
-  right:-5px;
-  bottom:-5px;
-  width:19px;
-  height:19px;
-  display:grid;
-  place-items:center;
-  border:2px solid #f8fcfa;
-  border-radius:50%;
-  background:#d89a39;
-  color:#153c36;
-  font:800 14px/1 'Manrope',sans-serif;
-  box-shadow:0 2px 6px #0e39333d;
-}
 .hero-section{
   width:100vw;
   max-width:none;
@@ -950,7 +935,7 @@ table tbody tr:hover{background:#f0f8f6}
 }
 .hero-section::before{left:-86px;top:-150px;width:230px}
 .hero-section::after{right:-120px;bottom:-174px;width:290px}
-.hero-copy{max-width:900px}
+.hero-copy{width:min(900px,100%);max-width:900px;text-align:center}
 .hero-copy .hero-eyebrow{
   justify-content:center;
   margin-bottom:8px;

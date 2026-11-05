@@ -102,7 +102,7 @@ function SiteLayout() {
   }
   return <div className="app-shell min-h-screen bg-slate-50 text-slate-900">
     <header className="topbar">
-      <Link to="/" className="brand"><span className="brand-mark"><ShieldCheck size={23}/><span className="brand-mark-plus">+</span></span><span><strong>Know Your Medicine</strong><small>INFORMATION FOR BETTER CHOICES</small></span></Link>
+      <Link to="/" className="brand"><span className="brand-mark"><ShieldCheck size={23}/></span><span><strong>Know Your Medicine</strong><small>INFORMATION FOR BETTER CHOICES</small></span></Link>
       <button className="mobile-menu" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen?<X/>:<Menu/>}</button>
       <nav onClick={()=>{setMenuOpen(false);setProfileOpen(false)}} className={menuOpen?'main-nav nav-open':'main-nav'}>
         <Link className={location.pathname==='/'?'active':''} to="/"><Home size={17}/><span>Home</span></Link>
@@ -122,7 +122,7 @@ function SiteLayout() {
       </nav>
     </header>
     <main className="page-content"><Outlet/></main>
-    <footer className="site-footer"><div className="footer-main"><Link to="/" className="brand footer-brand"><span className="brand-mark"><ShieldCheck size={22}/><span className="brand-mark-plus">+</span></span><span><strong>Know Your Medicine</strong><small>CARE STARTS WITH KNOWLEDGE</small></span></Link><p>Search medicines, understand how they are used, and connect with local stores.</p><div><Link to="/medicines">Medicine catalog</Link><Link to="/about">About us</Link><Link to="/contact">Contact &amp; support</Link><Link to="/login">User sign in</Link><Link to="/admin/login">Admin sign in</Link><Link to="/register/store">Store registration</Link></div></div><div className="footer-bottom">© {currentYear} Know Your Medicine <span>For medicine questions, always consult a qualified healthcare professional.</span></div></footer>
+    <footer className="site-footer"><div className="footer-main"><Link to="/" className="brand footer-brand"><span className="brand-mark"><ShieldCheck size={22}/></span><span><strong>Know Your Medicine</strong><small>CARE STARTS WITH KNOWLEDGE</small></span></Link><p>Search medicines, understand how they are used, and connect with local stores.</p><div><Link to="/medicines">Medicine catalog</Link><Link to="/about">About us</Link><Link to="/contact">Contact &amp; support</Link><Link to="/login">User sign in</Link><Link to="/admin/login">Admin sign in</Link><Link to="/register/store">Store registration</Link></div></div><div className="footer-bottom">© {currentYear} Know Your Medicine <span>For medicine questions, always consult a qualified healthcare professional.</span></div></footer>
     <MedicineAssistant/>
   </div>
 }
