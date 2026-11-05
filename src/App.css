@@ -672,3 +672,35 @@ table tbody tr:hover{background:#f0f8f6}
 .password-input input{box-sizing:border-box;width:100%;padding-right:42px}
 .password-visibility{position:absolute;z-index:1;top:50%;right:10px;display:grid;place-items:center;padding:5px;border:0;background:transparent;color:#58716d;transform:translateY(-50%);cursor:pointer}
 .password-visibility:hover{color:var(--teal)}
+.topbar .brand-mark{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border:1px solid #34796d;
+  border-radius:14px;
+  background:linear-gradient(145deg,#174d46,#0d332f);
+  color:#e7f5ef;
+  box-shadow:0 4px 10px #0e393324;
+}
+.topbar .brand-mark svg{stroke-width:2.4}
+@media(max-width:600px){
+  .topbar{gap:10px}
+  .topbar .brand{min-width:0;gap:8px}
+  .topbar .brand-mark{width:40px;height:40px;flex:none;border-radius:12px}
+  .topbar .brand strong{font-size:13px}
+  .topbar .brand small{font-size:6px;letter-spacing:.1em}
+  .page-title{padding:22px 16px}
+  .page-title h1{font-size:clamp(22px,6vw,32px);overflow-wrap:anywhere}
+  .content-page,.featured-section{padding-right:16px;padding-left:16px}
+  .table-wrap{max-width:100%;overflow-x:auto}
+  .form-card{padding:20px}
+  .auth-intro{min-height:160px;padding:24px 18px 42px}
+}
+@media(max-width:360px){
+  .topbar{padding-inline:12px}
+  .topbar .brand strong{font-size:12px}
+  .topbar .brand small{display:none}
+  .topbar .brand-mark{width:36px;height:36px}
+  .mobile-menu{width:36px;height:36px}
+}
